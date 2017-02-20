@@ -34,18 +34,30 @@ $scrabble = array(
 
 // gevraagd: Zorg dat de functie show alle keys en values afdrukt. Maak gebruik van een foreach-loop. Extra: zorg dat de volgorde oplopend is naar aantal punten per letter.
 
-funcion show($assray) {
+function show($assray) {
+	asort($assray);
+	foreach($assray as $key => $value){
+		echo"$key => $value";
+		echo "<br>";
+	}
 
 }
-
+show($scrabble);
 
 // gevraagd: Vul de functie verder aan zodat ze het totaal behaalde punten returnt. De code kan sterk vereenvoudigd (i.v.m. switch/case) door op de gepaste manier gebruik de maken van bovenstaande associatieve array.
 
-function punten($woord) {
+function punten($woord){
 
-    return 0;
+$woord = strtoupper($woord);
+
+for($i = 0; $i < strlen($woord); $i++){
+	echo $woord[$i];							
+	}
+
 }
 
+
+punten("hey");
 // gevraagd: Print van enkele woorden de punten af met bovenstaande functie.
 // Zorg dat er woorden met zowel kleine als hoofdletters tussen zitten.
 
